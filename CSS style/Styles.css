@@ -82,19 +82,21 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7); /* Stronger dark overlay */
     z-index: -1;
 }
 
 .banner-content h1 {
     font-size: 48px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .banner-content p {
     font-size: 20px;
     margin-top: 15px;
+    font-weight: 500;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -102,7 +104,8 @@ a:hover {
 .flex-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Center containers horizontally */
+    align-items: stretch; /* Make all items equal in height */
     gap: 20px;
     padding: 20px;
     background-color: #f4f4f4;
@@ -111,8 +114,10 @@ a:hover {
 .flex-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     flex-grow: 1;
+    gap: 20px;
+    max-width: 1200px; /* Limit container width for better balance */
+    width: 100%;
 }
 
 .flex-item {
@@ -120,9 +125,11 @@ a:hover {
     color: white;
     border-radius: 10px;
     padding: 20px;
-    width: calc(33% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33% - 20px); /* Dynamic width for responsiveness */
+    max-width: 400px; /* Limit maximum width */
+    text-align: left;
 }
 
 .flex-item:hover {
@@ -131,24 +138,15 @@ a:hover {
 }
 
 .flex-content h1 {
-    text-align: left;
     font-size: 24px;
     margin-bottom: 10px;
+    color: #fff;
 }
 
-.flex-content p {
-    font-size: 18px;
-    margin-top: 5px;
-}
-
-.flex-content ul {
-    list-style-type: disc;
-    margin-top: 5px;
-    padding-left: 20px;
-}
-
+.flex-content p,
 .flex-content ul li {
-    font-size: 14px;
+    font-size: 16px;
+    color: #fff;
     margin-bottom: 8px;
 }
 
