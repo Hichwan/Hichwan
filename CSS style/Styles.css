@@ -11,21 +11,22 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif; /* Ensure Google Font inclusion */
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 18px; /* Slightly larger for better readability */
+    line-height: 1.75;
     color: #333; /* Dark gray text for readability */
     background: #f9f9f9; /* Light background for contrast */
 }
 
-
+/* Links */
 a {
     text-decoration: none;
     color: #ffffff;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
-    color: #4891ff;
+    color: #4891ff; /* Professional blue */
+    text-shadow: 0 0 8px rgba(72, 145, 255, 0.5); /* Glow effect */
 }
 
 /* Navbar */
@@ -52,9 +53,10 @@ a:hover {
 }
 
 .navbar ul li a {
-    padding: 10px 20px;
-    display: block;
+    padding: 8px 15px; /* Compact spacing */
     font-weight: 600;
+    text-transform: uppercase; /* Cleaner look */
+    letter-spacing: 1px; /* Slight letter-spacing */
     transition: color 0.3s ease;
 }
 
@@ -64,7 +66,11 @@ a:hover {
 
 /* Hero Banner */
 .hero-banner {
-    background: url(../Images/DSC01091.JPG) no-repeat center center; 
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("../Images/DSC01091.JPG") no-repeat center center; /* Fixed path */
     background-size: cover;
     height: 70vh;
     display: flex;
@@ -83,15 +89,15 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for better readability */
     z-index: -1;
 }
 
 .banner-content h1 {
     font-size: 54px; /* Larger headline */
-    margin-bottom: 20px;
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
 }
 
 .banner-content p {
@@ -101,13 +107,14 @@ a:hover {
     line-height: 1.8;
 }
 
-
 /* Flex Section */
 .flex-section {
     display: flex;
     justify-content: center; /* Center the flex-container horizontally */
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f9f9f9, #e8e8e8); /* Subtle gradient */
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 /* Flex Container */
@@ -116,17 +123,9 @@ a:hover {
     flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
     justify-content: center; /* Center all items within the container */
     gap: 20px; /* Space between flex items */
-    max-width: 1200px; /* Set a maximum width for the container */
-    width: 100%; /* Make sure it uses full width within the parent */
-    margin: 0 auto; /* Center the container within the flex-section */
-    padding: 20px;
-}
-
-.flex-section {
-    padding: 40px 20px;
-    background: #f5f5f5; /* Light gray */
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .flex-item {
@@ -138,11 +137,13 @@ a:hover {
     flex: 1 1 calc(33% - 20px);
     max-width: 400px;
     text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .flex-item h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 700; /* Bold for emphasis */
 }
 
 .flex-item ul {
@@ -156,38 +157,28 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Projects Page */
 .projects-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    background-color: #707070; /* Dark gray background for the page */
+    background-color: #707070; /* Dark gray */
 }
 
 .projects-page h1 {
     font-size: 36px;
-    text-align: center;
     color: white;
     margin-bottom: 30px;
 }
 
-/* Projects Container */
-.projects-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    justify-content: center; /* Center all cards */
-    gap: 20px; /* Space between project cards */
-}
-
-/* Individual Project Card */
+/* Project Card */
 .project-card {
     background-color: #242222;
     color: white;
     border-radius: 10px;
     padding: 20px;
-    width: calc(33% - 20px); /* Cards take 1/3 of row width */
+    width: calc(33% - 20px);
     max-width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -206,179 +197,84 @@ a:hover {
 }
 
 .project-card h2:hover {
-    color: #357bbd; /* Darker blue on hover */
+    color: #357bbd;
 }
-
 
 /* Bullet Points */
 .project-details {
-    list-style-type: disc; /* Add bullets to the list */
-    margin-left: 20px; /* Indent the list */
-    padding-left: 0; /* Ensure no extra padding */
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
 .project-details li {
     font-size: 16px;
-    line-height: 1.6; /* Better spacing for readability */
-    margin-bottom: 10px; /* Space between each bullet point */
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
-/* GitHub Button */
+/* Buttons */
 .project-card a {
     text-decoration: none;
     color: white;
     background-color: #4891ff;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 18px;
+    border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .project-card a:hover {
-    background-color: #357bbd; /* Darker blue on hover */
-}
-
-/* Contact Form */
-.contact-section {
-    padding: 40px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.contact-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact-section .form-group {
-    margin-bottom: 20px;
-}
-
-.contact-section label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.contact-section input,
-.contact-section textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-}
-
-.contact-section textarea {
-    resize: vertical;
-}
-
-.contact-section button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #4891ff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-section button:hover {
     background-color: #357bbd;
+    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow effect */
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 13px 20px;
-    background: #4891ff;
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
-.btn-primary {
-    background: #4891ff; /* Professional blue */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background: #357bbd; /* Darker blue on hover */
-    cursor: pointer;
-}
-
-.btn-dark {
-    background: black;
-    color: white;
-}
-
-.btn-block {
-    display: block;
-    width: 100%;
-}
-
+/* Footer */
 .footer {
-    background: #333;
-    color: white;
+    background: #242424;
+    color: #aaa;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.footer .social-icons {
-    margin-top: 10px;
+    padding: 30px 20px;
+    font-size: 14px;
+    border-top: 2px solid #444;
 }
 
 .footer .social-icons a {
-    color: white;
+    font-size: 20px;
     margin: 0 10px;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    color: #ddd;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer .social-icons a:hover {
     color: #4891ff;
+    transform: scale(1.2);
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .flex-item {
-        flex: 1 1 100%; /* Items take full width on small screens */
-        max-width: 100%; /* Remove the maximum width for stacking */
+        flex: 1 1 100%;
+        max-width: 100%;
     }
-}
 
     .project-card {
         width: calc(100% - 40px);
     }
 
+    .navbar .main-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .hero-banner {
-        height: 65vh;
-        padding: 40px;
+        height: auto;
+        padding: 40px 20px;
     }
 
     .banner-content h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .banner-content p {
