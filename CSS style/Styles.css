@@ -64,7 +64,7 @@ a:hover {
 
 /* Hero Banner */
 .hero-banner {
-    background: url(../Images/hero-background.jpg) no-repeat center center; /* Replace with your image */
+    background: url(../Images/DSC01091.jpg) no-repeat center center; 
     background-size: cover;
     height: 70vh;
     display: flex;
