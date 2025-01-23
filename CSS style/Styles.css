@@ -94,7 +94,7 @@ a:hover {
 }
 
 .banner-content p {
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 15px;
     font-weight: 500;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -144,7 +144,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: #707070;
+    background: #707070; /* Page background */
 }
 
 .projects-page h1 {
@@ -154,26 +154,31 @@ a:hover {
     margin-bottom: 20px;
 }
 
+/* Projects Container */
 .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #242222;
-    color: white;
-    border-radius: 10px;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: center; /* Center all cards */
+    gap: 20px; /* Add space between cards */
     padding: 20px;
-    width: calc(33% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Project Card */
+.project-card {
+    background-color: #242222; /* Dark card background */
+    color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    width: calc(33% - 20px); /* Dynamic width (1/3 of row) */
+    max-width: 400px; /* Limit width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
 }
 
 .project-card h2 {
@@ -187,20 +192,22 @@ a:hover {
     margin-bottom: 20px;
 }
 
+/* GitHub Button */
 .project-card a {
     text-decoration: none;
-    color: white;
-    background-color: #4891ff;
-    padding: 10px 15px;
-    border-radius: 4px;
+    color: white; /* White text */
+    background-color: #4891ff; /* Blue background */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 4px; /* Rounded corners */
     font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Smooth color transition */
 }
 
 .project-card a:hover {
-    background-color: #357bbd;
+    background-color: #357bbd; /* Darker blue on hover */
 }
+
 
 /* Contact Form */
 .contact-section {
