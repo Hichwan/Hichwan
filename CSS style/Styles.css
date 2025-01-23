@@ -14,7 +14,7 @@ body {
     font-size: 18px; /* Slightly larger for better readability */
     line-height: 1.75;
     color: #333; /* Dark gray text for readability */
-    background: #f9f9f9; /* Light background for contrast */
+    background: #f9f9f9; /* Light background for contrast *
 }
 
 /* Links */
@@ -156,6 +156,68 @@ a:hover {
     transform: scale(1.03);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+/* Contact Section */
+.contact-section {
+    padding: 40px;
+    background-color: #333; /* Dark background */
+    color: white;
+    text-align: center; /* Center text inside the section */
+    margin-top: 40px;
+    border-top: 2px solid #444;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4891ff; /* Highlighted title */
+}
+
+.contact-section form {
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    text-align: left; /* Left-align the form labels and inputs */
+}
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.contact-section textarea {
+    resize: vertical;
+}
+
+.contact-section button {
+    display: block; /* Ensure the button is block-level and centered */
+    margin: 20px auto 0; /* Center button horizontally */
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #4891ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #357bbd;
+}
 
 /* Projects Page */
 .projects-page {
@@ -172,20 +234,27 @@ a:hover {
     margin-bottom: 30px;
 }
 
-/* Project Card */
+/* Project Cards */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center-align cards */
+    gap: 20px; /* Add space between the cards */
+}
+
 .project-card {
     background-color: #242222;
     color: white;
     border-radius: 10px;
     padding: 20px;
-    width: calc(33% - 20px);
-    max-width: 400px;
+    flex: 1 1 calc(33% - 40px); /* Take 1/3 of the row, with gaps */
+    max-width: 400px; /* Limit the maximum width */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -193,24 +262,32 @@ a:hover {
     font-size: 24px;
     margin-bottom: 10px;
     color: #4891ff;
-    transition: color 0.3s ease;
 }
 
-.project-card h2:hover {
-    color: #357bbd;
-}
-
-/* Bullet Points */
-.project-details {
-    list-style-type: disc;
+.project-card ul {
+    list-style: disc;
     margin-left: 20px;
-}
-
-.project-details li {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 10px;
 }
+
+.project-card a {
+    display: inline-block; /* Make the button behave consistently */
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #4891ff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #357bbd;
+}
+
 
 /* Buttons */
 .project-card a {
@@ -258,21 +335,29 @@ a:hover {
         flex: 1 1 100%;
         max-width: 100%;
     }
-
-    .project-card {
-        width: calc(100% - 40px);
-    }
-
     .navbar .main-menu ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    .hero-banner {
-        height: auto;
-        padding: 40px 20px;
+    .project-card {
+        flex: 1 1 100%; /* Full width for smaller screens */
+        max-width: 100%; /* Remove maximum width */
     }
 
+    .projects-container {
+        gap: 15px; /* Reduce gap between cards on smaller screens */
+    }
+
+    .contact-section {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .hero-banner {
+        height: auto; /* Allow the height to adjust */
+        padding: 40px 20px;
+        text-align: center;
+    }
     .banner-content h1 {
         font-size: 32px;
     }
