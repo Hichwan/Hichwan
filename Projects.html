@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Lillian Ichwan</title>
-    <link rel="stylesheet" href="CSS style/Styles.css">
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body class="projects-page">
     <h1>My Projects</h1>
     <div class="projects-container">
-        <div class="project-card">
-            <h2>Rock Climber Mobile App</h2>
-            <p>Developed a full-stack mobile app with React Native and Firebase. Features include real-time tracking, interactive charts, and secure user authentication.</p>
-            <a href="https://github.com/Hichwan/RockClimber" target="_blank" class="btn btn-primary">View on GitHub</a>
-        </div>
+        <!-- Hospital Fiscal Report Analysis -->
         <div class="project-card">
             <h2>Hospital Fiscal Report Analysis</h2>
-            <p>Preprocessed data for 100+ hospitals using Python and Tableau. Created dashboards and trained a Decision Tree Regressor to analyze fiscal trends (R²: 0.71).</p>
+            <p>Preprocessed unstructured and incomplete financial data across 100+ hospitals in California using Python (NumPy, Pandas) and Excel. 
+            Developed and trained a Decision Tree Regressor (scikit-learn) to analyze fiscal trends, achieving actionable insights with a preliminary R² score of 0.71. 
+            Designed an interactive Tableau dashboard to visualize hospital revenue trends, optimizing financial forecasting.</p>
             <a href="https://github.com/Hichwan/Medical-Dataset" target="_blank" class="btn btn-primary">View on GitHub</a>
-        </div>        
+        </div>
+
+        <!-- Rock Climbing Tracker App -->
+        <div class="project-card">
+            <h2>Rock Climbing Tracker App</h2>
+            <p>Developed a full-stack mobile app with React Native, TypeScript, & Expo, enabling users to log 100+ climbing sessions and dynamically track progress. 
+            Integrated Firebase Firestore for real-time database storage and Firebase Authentication for secure user login. 
+            Implemented GPS tracking via Expo Location API, achieving 95% accuracy for automatic location logging. 
+            Built interactive data visualizations using react-native-chart-kit, helping users analyze climbing progress over 500+ climbs. 
+            Integrated a linear regression model to predict climbing difficulty, achieving an R² score of 0.78 with an MSE of 1.25.</p>
+            <a href="https://github.com/Hichwan/RockClimber" target="_blank" class="btn btn-primary">View on GitHub</a>
+        </div>
+
+        <!-- Line Regression Budgeting Program -->
+        <div class="project-card">
+            <h2>Line Regression Budgeting Program</h2>
+            <p>Built a CRUD application with Python, SQLite, and Pandas to manage user expenses, automating data tracking and budget forecasting. 
+            Predicted future expenses and incomes for a year with a preliminary R-squared of 0.5 using linear regression, identifying opportunities for further model improvement.</p>
+            <a href="https://github.com/Hichwan/BudgetProgram" target="_blank" class="btn btn-primary">View on GitHub</a>
+        </div>
+
+        <!-- Reinforced Learning Reversi -->
         <div class="project-card">
             <h2>Reinforced Learning Reversi</h2>
-            <p>Interactive Reversi game using Python, Pygame, and OOP. Integrated reinforcement learning to boost AI decision-making, achieving a 30% improvement in win rates.</p>
+            <p>Developed an interactive Reversi game with Python, Pygame, OOP, and NumPy, featuring three modes: AI vs AI, AI vs Human, and Human vs Human. 
+            Integrated reinforcement learning to improve AI decision-making, achieving a 30% increase in gameplay efficiency based on win rates against a baseline opponent. 
+            Utilized hash maps to efficiently store and reference possible valid moves, reducing lookup time complexity to O(1) and improving AI speed.</p>
             <a href="https://github.com/Hichwan/Game-Reinforced-Learning" target="_blank" class="btn btn-primary">View on GitHub</a>
-        </div>
-        <div class="project-card">
-            <h2>Budgeting Program</h2>
-            <p>Built a CRUD application using Python, SQLite, and Pandas for expense management. Incorporated linear regression for budget forecasting with an R² score of 0.5.</p>
-            <a href="https://github.com/Hichwan/BudgetProgram" target="_blank" class="btn btn-primary">View on GitHub</a>
         </div>
     </div>
 </body>
