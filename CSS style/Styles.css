@@ -103,23 +103,24 @@ a:hover {
 /* Flex Section */
 .flex-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center containers horizontally */
-    align-items: stretch; /* Make all items equal in height */
-    gap: 20px;
+    justify-content: center; /* Center the flex-container horizontally */
     padding: 20px;
     background-color: #f4f4f4;
 }
 
+/* Flex Container */
 .flex-container {
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 20px;
-    max-width: 1200px; /* Limit container width for better balance */
-    width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: center; /* Center all items within the container */
+    gap: 20px; /* Space between flex items */
+    max-width: 1200px; /* Set a maximum width for the container */
+    width: 100%; /* Make sure it uses full width within the parent */
+    margin: 0 auto; /* Center the container within the flex-section */
+    padding: 20px;
 }
 
+/* Flex Items */
 .flex-item {
     background-color: #242222;
     color: white;
@@ -127,27 +128,14 @@ a:hover {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 calc(33% - 20px); /* Dynamic width for responsiveness */
-    max-width: 400px; /* Limit maximum width */
+    flex: 1 1 calc(33% - 20px); /* Dynamically size each item */
+    max-width: 400px; /* Limit the maximum width of each flex-item */
     text-align: left;
 }
 
 .flex-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.flex-content h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.flex-content p,
-.flex-content ul li {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 8px;
 }
 
 /* Projects Page */
@@ -303,8 +291,10 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .flex-item {
-        width: calc(100% - 40px);
+        flex: 1 1 100%; /* Items take full width on small screens */
+        max-width: 100%; /* Remove the maximum width for stacking */
     }
+}
 
     .project-card {
         width: calc(100% - 40px);
