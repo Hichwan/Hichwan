@@ -156,6 +156,51 @@ a:hover {
     transform: scale(1.03);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* Projects Preview Section */
+.flex-item h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 700; /* Bold heading */
+    color: #4891ff; /* Highlighted title */
+}
+
+.flex-item p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333; /* Neutral text color */
+    line-height: 1.6;
+}
+
+.flex-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+.flex-item ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.flex-item a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    background-color: #4891ff;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.flex-item a:hover {
+    background-color: #357bbd;
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
 /* Contact Section */
 .contact-section {
     padding: 40px;
